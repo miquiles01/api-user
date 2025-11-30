@@ -12,7 +12,7 @@ A aplicação oferece um CRUD completo de usuários com validações e respostas
 - **Spring Web**
 - **Spring Data JPA**
 - **Hibernate**
-- **Banco de dados relacional** (MySQL / PostgreSQL / H2 — escolha conforme seu ambiente)
+- **Banco de dados in-memory** (H2)
 - **Maven**
 
 ---
