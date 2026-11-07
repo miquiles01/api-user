@@ -1,31 +1,24 @@
-package dto;
+
+package adapter.input.dto;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
-public class UserDTO {
-    private Long id;
+public class UserRequestDTO {
+
     private String nome;
     private String email;
     private String cpf;
     private LocalDate dataNascimento;
-    private LocalDateTime dataCadastro;
 
-    public UserDTO(Long id, String nome, String email, String cpf, LocalDate dataNascimento, LocalDateTime dataCadastro) {
-        this.id = id;
+    public UserRequestDTO() {
+    }
+
+    public UserRequestDTO(String nome, String email, String cpf,
+                          LocalDate dataNascimento) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
-        this.dataCadastro = dataCadastro;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -58,13 +51,5 @@ public class UserDTO {
 
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
-    }
-
-    public LocalDateTime getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDateTime dataCadastro) {
-        this.dataCadastro = dataCadastro;
     }
 }

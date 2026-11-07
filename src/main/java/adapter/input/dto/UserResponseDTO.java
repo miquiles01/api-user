@@ -1,17 +1,11 @@
-package entities;
 
-import jakarta.persistence.*;
+package adapter.input.dto;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
-@Entity
-@Table(name = "tb_user")
-public class UserEntity {
+public class UserResponseDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
@@ -19,9 +13,12 @@ public class UserEntity {
     private LocalDate dataNascimento;
     private LocalDateTime dataCadastro;
 
-    public UserEntity(){}
+    public UserResponseDTO() {
+    }
 
-    public UserEntity(Long id, String nome, String email, String cpf, LocalDate dataNascimento, LocalDateTime dataCadastro) {
+    public UserResponseDTO(Long id, String nome, String email,
+                           String cpf, LocalDate dataNascimento,
+                           LocalDateTime dataCadastro) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -76,17 +73,5 @@ public class UserEntity {
 
     public void setDataCadastro(LocalDateTime dataCadastro) {
         this.dataCadastro = dataCadastro;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        UserEntity that = (UserEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(cpf, that.cpf);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, cpf);
     }
 }

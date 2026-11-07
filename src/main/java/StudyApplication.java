@@ -1,5 +1,3 @@
-package api.user.study;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
